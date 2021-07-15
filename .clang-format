@@ -6,9 +6,9 @@ Language: Cpp
 ColumnLimit: 150
 AccessModifierOffset: 0
 AlignAfterOpenBracket: Align
-AlignConsecutiveAssignments: true
+#AlignConsecutiveAssignments: true
 AlignConsecutiveBitFields: true
-AlignConsecutiveDeclarations: true
+#AlignConsecutiveDeclarations: true
 AlignConsecutiveMacros: true
 AlignEscapedNewlines: Left
 AlignOperands: Align

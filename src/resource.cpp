@@ -72,7 +72,7 @@ alt::String BoilerplateResource::ReadFile(alt::String path)
     if(!pkg->FileExists(path)) return alt::String();
     // Open file
     alt::IPackage::File* pkgFile = pkg->OpenFile(path);
-    alt::String          src(pkg->GetFileSize(pkgFile));
+    alt::String src(pkg->GetFileSize(pkgFile));
     // Read file content
     pkg->ReadFile(pkgFile, src.GetData(), src.GetSize());
     pkg->CloseFile(pkgFile);

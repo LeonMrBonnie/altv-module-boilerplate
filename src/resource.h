@@ -8,7 +8,7 @@ class BoilerplateRuntime;
 class BoilerplateResource : public alt::IResource::Impl
 {
     BoilerplateRuntime* runtime;
-    alt::IResource*     resource;
+    alt::IResource* resource;
 
 public:
     BoilerplateResource(BoilerplateRuntime* runtime, alt::IResource* resource) : runtime(runtime), resource(resource){};

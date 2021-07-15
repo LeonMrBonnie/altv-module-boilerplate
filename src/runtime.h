@@ -11,8 +11,8 @@ class BoilerplateRuntime : public alt::IScriptRuntime
 public:
     BoilerplateRuntime();
     alt::IResource::Impl* CreateImpl(alt::IResource* resource) override;
-    void                  DestroyImpl(alt::IResource::Impl* impl) override;
-    void                  OnTick() override;
+    void DestroyImpl(alt::IResource::Impl* impl) override;
+    void OnTick() override;
 
     BoilerplateResource* GetResource(alt::IResource* resource)
     {
