@@ -58,15 +58,8 @@ void BoilerplateResource::OnRemoveBaseObject(alt::Ref<alt::IBaseObject> object)
     // of all the existing base objects, to check if they are valid in the user scripts
 }
 
-#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
-    #define FILE_SEPERATOR "\\"
-#else
-    #define FILE_SEPERATOR "/"
-#endif
 alt::String BoilerplateResource::ReadFile(alt::String path)
 {
-    // Use the alt:V functions to read the file
-#ifdef CLIENT_MODULE
     auto pkg = resource->GetPackage();
     // Check if file exists
     if(!pkg->FileExists(path)) return alt::String();
@@ -78,16 +71,4 @@ alt::String BoilerplateResource::ReadFile(alt::String path)
     pkg->CloseFile(pkgFile);
 
     return src;
-#endif  // CLIENT_MODULE
-
-    // Use the native C++ API to read the file, because it's faster
-#ifdef SERVER_MODULE
-    // Open file
-    std::ifstream file((resource->GetPath() + FILE_SEPERATOR + path).CStr());
-    if(!file.good()) return alt::String();
-    // Read file content
-    std::string str((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-
-    return str;
-#endif  // SERVER_MODULE
 }
