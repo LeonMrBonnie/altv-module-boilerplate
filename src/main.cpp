@@ -1,5 +1,6 @@
 #include "main.h"
 #include "Log.h"
+#include "cpp-sdk/version/version.h" // Don't worry if your IDE doesn't find this file, compile the module once, to generate this file
 
 #ifdef SERVER_MODULE
 EXPORT bool altMain(alt::ICore* core)
@@ -31,7 +32,7 @@ EXPORT const char* GetType()
 }
 #endif
 
-EXPORT uint32_t GetSDKVersion()
+EXPORT const char* GetSDKHash()
 {
-    return alt::ICore::SDK_VERSION;
+    return ALT_SDK_VERSION;
 }

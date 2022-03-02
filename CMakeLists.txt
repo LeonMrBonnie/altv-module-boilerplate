@@ -3,6 +3,8 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+include("deps/cpp-sdk/CMakeLists.txt")
+
 project ("altv-boilerplate-module")
 
 set(CMAKE_CXX_STANDARD 17)
@@ -40,6 +42,8 @@ include_directories(
 add_library(${PROJECT_MODULE_NAME} SHARED
 	${PROJECT_SOURCE_FILES}
 )
+
+add_dependencies(${PROJECT_MODULE_NAME} alt-sdk)
 
 target_link_libraries(${PROJECT_MODULE_NAME} PRIVATE
     # Any additional libraries you want to link
