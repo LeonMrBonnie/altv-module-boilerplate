@@ -12,7 +12,7 @@ bool BoilerplateResource::Start()
 {
     // Load file
     auto src = ReadFile(resource->GetMain());
-    if(src.IsEmpty())
+    if(src.empty())
     {
         Log::Error << "Failed to read resource main file" << Log::Endl;
         return false;
@@ -58,16 +58,16 @@ void BoilerplateResource::OnRemoveBaseObject(alt::Ref<alt::IBaseObject> object)
     // of all the existing base objects, to check if they are valid in the user scripts
 }
 
-alt::String BoilerplateResource::ReadFile(alt::String path)
+std::string BoilerplateResource::ReadFile(std::string path)
 {
     auto pkg = resource->GetPackage();
     // Check if file exists
-    if(!pkg->FileExists(path)) return alt::String();
+    if(!pkg->FileExists(path)) return std::string();
     // Open file
     alt::IPackage::File* pkgFile = pkg->OpenFile(path);
-    alt::String src(pkg->GetFileSize(pkgFile));
+    std::string src(pkg->GetFileSize(pkgFile), '\0');
     // Read file content
-    pkg->ReadFile(pkgFile, src.GetData(), src.GetSize());
+    pkg->ReadFile(pkgFile, src.data(), src.size());
     pkg->CloseFile(pkgFile);
 
     return src;
