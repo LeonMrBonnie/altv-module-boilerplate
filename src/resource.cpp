@@ -11,7 +11,7 @@
 bool BoilerplateResource::Start()
 {
     // Load file
-    auto src = ReadFile(resource->GetMain());
+    auto src = ReadFile(resource->GetMain().ToString());
     if(src.empty())
     {
         Log::Error << "Failed to read resource main file" << Log::Endl;
