@@ -3,6 +3,8 @@ build
 CMakeFiles
 dist
 
+.idea
+
 # CMake
 Makefile
 cmake_install.cmake
