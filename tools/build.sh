@@ -6,7 +6,6 @@ if [ $# -eq 1 ]; then
 fi
 
 # Build project
-cd ..
 if [ ! -d "./build" ]; then
     mkdir build
 fi
