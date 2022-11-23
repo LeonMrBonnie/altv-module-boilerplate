@@ -1,3 +1,3 @@
 @echo off
 
-git submodule update --remote --merge --recursive deps/cpp-sdk
+git submodule update --init --remote --merge --recursive deps/cpp-sdk
