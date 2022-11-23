@@ -1,6 +1,3 @@
 @echo off
 
-cd ..
-cd deps/cpp-sdk
-git pull origin master
-cd ../..
+git submodule update --remote --merge --recursive deps/cpp-sdk
