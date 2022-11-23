@@ -26,10 +26,8 @@
 1. Run `git clone https://github.com/LeonMrBonnie/altv-module-boilerplate.git` to clone the repository
 2. Navigate to the folder with `cd altv-module-boilerplate`
 3. Run the `tools/update-sdk.bat` *(Windows)* or `tools/update-sdk.sh` *(Linux)* to make sure you have the last version of the SDK.
-4. Run `git submodule init` to initialize the submodules
-5. Then run `git submodule update --init --recursive` to fetch the submodules recursively.
-6. Run the `tools/build.bat` *(Windows)* or the `tools/build.sh` *(Linux)* to build the project using CMake
-7. The built project `.dll` / `.so` can now be found in the `dist` directory
+4. Run the `tools/build.bat` *(Windows)* or the `tools/build.sh` *(Linux)* to build the project using CMake
+5. The built project `.dll` / `.so` can now be found in the `dist` directory
 
 If any errors persist, make sure to follow steps closely.
 
