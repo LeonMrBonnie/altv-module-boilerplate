@@ -34,10 +34,9 @@ bool BoilerplateResource::Stop()
     return true;
 }
 
-bool BoilerplateResource::OnEvent(const alt::CEvent* ev)
+void BoilerplateResource::OnEvent(const alt::CEvent* ev)
 {
     // Handle incoming events here, e.g. call the event handlers registered by the resource
-    return true;
 }
 
 void BoilerplateResource::OnTick()
@@ -46,13 +45,13 @@ void BoilerplateResource::OnTick()
     // This can be e.g. timers
 }
 
-void BoilerplateResource::OnCreateBaseObject(alt::Ref<alt::IBaseObject> object)
+void BoilerplateResource::OnCreateBaseObject(alt::IBaseObject* object)
 {
     // Called every time a base object has been created, so you can use this to keep track
     // of all the existing base objects, to check if they are valid in the user scripts
 }
 
-void BoilerplateResource::OnRemoveBaseObject(alt::Ref<alt::IBaseObject> object)
+void BoilerplateResource::OnRemoveBaseObject(alt::IBaseObject* object)
 {
     // Called every time a base object has been created, so you can use this to keep track
     // of all the existing base objects, to check if they are valid in the user scripts

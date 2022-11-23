@@ -17,11 +17,11 @@ public:
     bool Start() override;
     bool Stop() override;
 
-    bool OnEvent(const alt::CEvent* event) override;
+    void OnEvent(const alt::CEvent* event) override;
     void OnTick() override;
 
-    void OnCreateBaseObject(alt::Ref<alt::IBaseObject> object) override;
-    void OnRemoveBaseObject(alt::Ref<alt::IBaseObject> object) override;
+    void OnCreateBaseObject(alt::IBaseObject* object) override;
+    void OnRemoveBaseObject(alt::IBaseObject* object) override;
 
     bool MakeClient(alt::IResource::CreationInfo* info, alt::Array<std::string> files)
     {
