@@ -1,6 +1,4 @@
 @echo off
 
-cd ..
-cd deps/cpp-sdk
-git pull origin master
-cd ../..
+git submodule update --init --remote --merge --recursive deps/cpp-sdk
+cd deps/cpp-sdk && echo "current sdk commit:" && git log -1

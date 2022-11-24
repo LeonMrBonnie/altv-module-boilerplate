@@ -4,7 +4,7 @@
 BoilerplateRuntime::BoilerplateRuntime()
 {
     // Initialize everything for the runtime here,
-    // like setting up the scripting language interpeter etc.
+    // like setting up the scripting language interpreter etc.
 }
 
 alt::IResource::Impl* BoilerplateRuntime::CreateImpl(alt::IResource* impl)

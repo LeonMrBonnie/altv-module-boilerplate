@@ -6,9 +6,9 @@
       {
         "label": "Build server",
         "type": "shell",
-        "command": "cd tools && ./build.sh",
+        "command": "./tools/build.sh",
         "windows": {
-          "command": "cd tools && build-server.bat"
+          "command": "tools/build-server.bat"
         },
         "problemMatcher": ["$msCompile"],
         "group": {
@@ -19,7 +19,7 @@
       {
         "label": "Build client",
         "type": "shell",
-        "command": "cd tools && build-client.bat",
+        "command": "tools/build-client.bat",
         "problemMatcher": ["$msCompile"],
         "group": {
           "kind": "build",
@@ -29,9 +29,9 @@
       {
         "label": "Update C++ SDK",
         "type": "shell",
-        "command": "cd tools && ./update-sdk.sh",
+        "command": "./tools/update-sdk.sh",
         "windows": {
-          "command": "cd tools && update-sdk.bat"
+          "command": "tools/update-sdk.bat"
         },
         "problemMatcher": ["$msCompile"],
         "group": "build"

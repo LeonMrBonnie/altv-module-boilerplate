@@ -7,7 +7,6 @@ IF NOT "%1" == "" (
 )
 
 :: Build project
-pushd ..
 IF NOT EXIST build\ (
     mkdir build
 )
